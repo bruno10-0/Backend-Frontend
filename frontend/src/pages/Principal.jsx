@@ -43,7 +43,7 @@ function Principal() {
           ))}
           {publicacion.length > 0 ? <AlDia /> : <NoHay />}
         </div>
-        <div className="fixed top-0 right-0 w-1/5 h-screen bg-gray-200 p-4">
+        <div className="fixed top-0 right-0 w-52 h-screen bg-gray-200 p-4">
         </div>
       </div>
     </>

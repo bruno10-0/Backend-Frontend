@@ -93,8 +93,8 @@ const Publicacion = ({ publicacion }) => {
 
   return (
 
-    <div className='h-auto md:w-full flex justify-center items-center border-2 border-gray-300 mb-5 shadow-lg'>
-      <div className="h-full w-full bg-white overflow-hidden">
+    <div className='h-auto flex justify-center items-center  mb-5'>
+      <div className="h-full w-full bg-white overflow-hidden md:w-3/4 border-2 border-gray-300 shadow-2xl">
         <div className="flex items-center m-3">
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2">
             <img
@@ -121,8 +121,7 @@ const Publicacion = ({ publicacion }) => {
           <img
             src={publicacion.secure_URL}
             alt="Descripción de la imagen"
-            style={{ height: 'calc(100vh - 400px)' }}
-            className="w-auto  rounded-xl sm:rounded-none m-auto"
+            className="w-11/12 md:h-96 m-auto"
           />
 
         </div>
@@ -161,7 +160,7 @@ const Publicacion = ({ publicacion }) => {
             <div onClick={openModal}>
               <SlLocationPin
                 alt="Ubicación"
-                className="w-6 h-6 cursor-pointer transform transition-transform duration-300 hover:scale-125 hover:text-green-600 mr-2"
+                className="w-6 h-6 cursor-pointer transform transition-transform duration-300 hover:scale-125 hover:text-orange-400 mr-2"
               />
             </div>
           </div>
@@ -174,7 +173,7 @@ const Publicacion = ({ publicacion }) => {
           <p className='text-base ml-5'>{`${longitud} Me gusta`}</p>
         </div>
       </div>
-      <Modal isOpen={modalOpen} closeModal={closeModal} latitud={publicacion.lat} longitud={publicacion.lon} publicacion={publicacion} />
+      <Modal isOpen={modalOpen} closeModal={closeModal} latitud={publicacion.lat} longitud={publicacion.lon} publicacion={publicacion}  />
     </div>
 
   );

@@ -1,30 +1,39 @@
 import L from 'leaflet'; // Importa la clase L.Icon
 
 export const createCustomIcon = (ubi) => {
+
+    if(!ubi){
+      return new L.Icon({
+        iconUrl: "https://res.cloudinary.com/dzemdgvqo/image/upload/v1699558874/resources/qiemxfgznvtczn7arord.png",
+        iconSize: [35,40], // Tamaño del icono
+        iconAnchor: [35, 40], // Punto de anclaje del icono
+        popupAnchor: [-22, -35] // Punto de anclaje del popup
+      });
+    }
     let iconUrl = '';
     
     // Evalúa el valor de ubi.titulo y asigna la URL del icono correspondiente
     switch (ubi.titulo) {
-      case "Calle en mal estado":
-        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699471099/img/fxffnn6q5tof5xxasaws.png';
+      case "Infraestructura":
+        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699553250/resources/vefmcfkikelooasz5nvd.png';
         break;
-      case "Ruidos Molestos":
-        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699470975/img/mrt1veq8b0muu1u8eafl.png';
+      case "Comunitario":
+        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699553250/resources/kfht1h0vfzqtiwvsg69f.png';
         break;
-      case "Árbol caído":
-        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699470898/img/jhgv57gsxfqojol5ncsg.png';
+      case "Otro":
+        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699553250/resources/uur2w8klqlfslgn8p1dn.png';
         break;
-      case "Infraestructura obsoleta":
-        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699470767/img/ielz7qrcef9agqshc8hz.png';
+      case "Servicios":
+        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699553250/resources/or2jtgccqrlpbvplvlmx.png';
         break;
       default:
-        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699471608/img/diazlntipfb0rujegasb.png';
+        iconUrl = 'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699553393/resources/pl2cqanvfql6vpw0stls.png';
     }
   
     return new L.Icon({
       iconUrl: iconUrl,
-      iconSize: [25,30], // Tamaño del icono
-      iconAnchor: [25, 30], // Punto de anclaje del icono
-      popupAnchor: [-12, -25] // Punto de anclaje del popup
+      iconSize: [35,40], // Tamaño del icono
+      iconAnchor: [35, 40], // Punto de anclaje del icono
+      popupAnchor: [-22, -35] // Punto de anclaje del popup
     });
   };

@@ -28,7 +28,7 @@ export const Usuarios = sequelize.define('Usuarios', {
   img_perfil: {
     type: DataTypes.STRING,
     defaultValue:
-      'https://res.cloudinary.com/dzemdgvqo/image/upload/v1698414629/img/mawlby59pqvzp3fhvucp.jpg',
+      'https://res.cloudinary.com/dzemdgvqo/image/upload/v1699552685/resources/yeme3h3amnyek3afvgnb.png',
   },
   phoneNumber: {
     type: DataTypes.STRING,

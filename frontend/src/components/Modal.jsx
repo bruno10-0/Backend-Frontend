@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import { MapContainer, TileLayer, Marker} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import {createCustomIcon} from "../functions/custonIcon.js"
+const Modal = ({ isOpen, closeModal, latitud, longitud, publicacion }) => {
 
-const Modal = ({ isOpen, closeModal, latitud, longitud}) => {
   return (
     <>
       {isOpen && (
@@ -29,7 +30,8 @@ const Modal = ({ isOpen, closeModal, latitud, longitud}) => {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                   />
 
-                  <Marker position={[latitud, longitud]}>
+                  <Marker position={[latitud, longitud]} icon={createCustomIcon(publicacion)}>
+                    
                   </Marker>
                 </MapContainer>
 

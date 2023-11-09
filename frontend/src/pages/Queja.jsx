@@ -133,7 +133,7 @@ export default function Queja() {
     return (
         <>
 
-            <div className="w-auto h-auto flex justify-around">
+            <div className="w-full h-auto flex justify-around mx-auto md:w-3/4">
                 <Nav />
                 <div className='w-full h-auto mt-12 mb-4 md:mt-0 md:mb-0 md:w-5/6 md:ml-10 lg:w-9/12 lg:ml-56'>
                     <div className='bg-transparent w-full h-20 md:hidden'></div>
@@ -145,25 +145,25 @@ export default function Queja() {
                         </div>
 
 
-                        <div className="w-full h-14 border-2 rounded-lg  m-5 flex items-center ">
-                            <PiNumberCircleOneLight className="h-8 w-10" />
-                            <h1>Elija el tipo de queja.</h1>
+                        <div className="w-full h-14 border-2 rounded-lg  m-5 flex items-center">
+                            <PiNumberCircleOneLight className="h-8 w-10 text-orange-400" />
+                            <h1 className="text-blue-500 font-bold">Elija el tipo de queja.</h1>
                         </div>
 
                         <select
                             name="opcion"
-                            className="cursor-pointer w-full h-14 border-2 rounded-lg"
+                            className="cursor-pointer w-full h-14 border-2 rounded-lg text-blue-500 font-bold"
                             onChange={(e) => {
                                 formik.handleChange(e);
                                 formik.setFieldValue("opcion", e.target.value);
                             }}
                             value={formik.values.opcion}
                         >
-                            <option value="">Tipos de queja:</option>
-                            <option value="Ruidos Molestos">Ruidos Molestos</option>
-                            <option value="Calle en mal estado">Calle en mal estado</option>
-                            <option value="Árbol caído">Árbol caído</option>
-                            <option value="Infraestructura obsoleta">Infraestructura obsoleta</option>
+                            <option value="" className="text-blue-500 font-bold">Tipos de queja:</option>
+                            <option value="Infraestructura" className="text-blue-500 font-bold">Infraestructura</option>
+                            <option value="Comunitario" className="text-blue-500 font-bold">Comunitario</option>
+                            <option value="Servicios" className="text-blue-500 font-bold">Servicios</option>
+                            <option value="Otro" className="text-blue-500 font-bold">Otro</option>
                         </select>
 
                         {formik.errors.opcion && (
@@ -173,8 +173,8 @@ export default function Queja() {
                         )}
 
                         <div className="w-full h-14 border-2 rounded-lg m-5 flex items-center ">
-                            <PiNumberCircleTwoLight className="h-8 w-10" />
-                            <h1>Elija la imagen de su publicación </h1>
+                            <PiNumberCircleTwoLight className="h-8 w-10 text-orange-400" />
+                            <h1 className="text-blue-500 font-bold">Elija la imagen de su publicación </h1>
                         </div>
 
                         <input
@@ -200,18 +200,18 @@ export default function Queja() {
                         </div>
 
                         <div className="w-full h-14 border-2 rounded-lg m-5 flex items-center">
-                            <PiNumberCircleThreeLight className="h-8 w-10" />
-                            <h1>Coordenadas de la ubicación</h1>
+                            <PiNumberCircleThreeLight className="h-8 w-10 text-orange-400" />
+                            <h1 className="text-blue-500 font-bold">Coordenadas de la ubicación</h1>
 
                         </div>
                         {mostrarCoordenadas && (
                             <div
                                 className=' bg-blue-500 hover:bg-blue-600 text-white mb-5 flex items-center w-full h-14 border-2 rounded-lg cursor-pointer'
                                 onClick={openModal}>
-                                <SlLocationPin className='h-7 w-10 text-white' />
+                                <SlLocationPin className='h-7 w-10 text-orange-400' />
                                 <div className="flex-1"> {/* Agregamos un div contenedor para el texto */}
                                     <div className="flex items-center justify-center">
-                                        <h1>Ver la ubicación obtenida</h1>
+                                        <h1 className="font-bold">Ver la ubicación obtenida</h1>
                                     </div>
                                 </div>
                             </div>
@@ -237,8 +237,8 @@ export default function Queja() {
                             </div>
                         )}
                         <div className="w-full h-14 border-2 rounded-lg m-5 flex items-center ">
-                            <PiNumberCircleFourLight className="h-8 w-10" />
-                            <h1>Adjunte una descripción detallando el problema</h1>
+                            <PiNumberCircleFourLight className="h-8 w-10 text-orange-400" />
+                            <h1 className="text-blue-500 font-bold">Adjunte una descripción detallando el problema</h1>
                         </div>
 
                         <textarea

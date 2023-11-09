@@ -1,5 +1,4 @@
 import Ingresar from "../components/Formulario.Ingreso"
-import img from "../images/buho.png"
 import { Footer } from "../components/Footer"
 export default function Login_Logo() {
     return(
@@ -9,7 +8,10 @@ export default function Login_Logo() {
             <Ingresar/>
             </div>
             <div className="hidden lg:flex h-full w-1/2 bg-white items-center justify-center">
-                <img src={img} alt="imagen"/>
+                <img 
+                src="https://res.cloudinary.com/dzemdgvqo/image/upload/v1699554059/resources/lc9kwvzsioeizhgcpyzn.png" 
+                alt="imagen" 
+                className="mr-20"/>
             </div>
         </div>
         <Footer/>
