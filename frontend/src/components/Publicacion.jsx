@@ -94,7 +94,7 @@ const Publicacion = ({ publicacion }) => {
   return (
 
     <div className='h-auto flex justify-center items-center  mb-5'>
-      <div className="h-full w-full bg-white overflow-hidden md:w-3/4 border-2 border-gray-300 shadow-2xl">
+      <div className="h-full w-full bg-white overflow-hidden md:w-3/4 border-2 border-gray-300 shadow-blu">
         <div className="flex items-center m-3">
           <div className="w-10 h-10 rounded-full overflow-hidden mr-2">
             <img

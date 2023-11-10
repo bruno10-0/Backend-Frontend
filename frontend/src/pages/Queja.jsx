@@ -140,7 +140,7 @@ export default function Queja() {
                     <form onSubmit={formik.handleSubmit} className='w-full h-auto flex-col my-1 flex items-center'>
                         {isLoading ? (<Cargando className="fixed top-0 left-0 w-screen h-screen z-50" />) : null}
                         <div>
-                            <h1 className="mb-5 text-2xl font-bold">Formulario para Presentación de Quejas.</h1>
+                            <h1 className="mb-5 text-2xl font-bold text-center text-orange-400 flex">Formulario para Presentación de<p className="text-blue-500 ml-1">Quejas.</p></h1>
                             <h2 className="text-gray-500 my-3">Por favor, completa el formulario con cuidado para que podamos atender tus inquietudes de la mejor manera posible. Tu opinión es importante para nosotros.</h2>
                         </div>
 
