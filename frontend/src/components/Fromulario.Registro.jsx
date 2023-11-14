@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import * as Yup from "yup";
 import { useAuth } from '../context/authContext'
 import { Link, useNavigate } from "react-router-dom"
-import Cargando from '../components/Cargando';
+import {Cargando} from '../components/Cargando';
 export default function Form() {
 
 
@@ -11,7 +11,7 @@ export default function Form() {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [passwordStrength, setPasswordStrength] = useState(0);
-
+  
 
   //set campos del formulario
   const navigate = useNavigate();
@@ -125,9 +125,8 @@ export default function Form() {
 
     <form onSubmit={formik.handleSubmit} className="h-auto">
       {isLoading ? (<Cargando className="fixed top-0 left-0 w-screen h-screen z-50" />) : null}
-      <div className="bg-white px-10 py-20 rounded-3xl border-2 border-gray-100">
-        <h1 className="text-5xl font-semibold text-center mb-8">Registro</h1>
-        <div className="w-full h-1 bg-gradient-to-tr from-green-400 to-blue-400 rounded-full" />
+      <div className=" px-20">
+      <h1 className="font-bold text-center text-5xl text-orange-400">Registro</h1> 
         <p className="font-medium text-lg text-gray-500 mt-5 text-center">
           A continuación, ingrese sus datos:
         </p>
@@ -249,9 +248,9 @@ export default function Form() {
               Registrarme
             </button>
           </div>
-          <div className="mt-8 flex justify-center items-center">
+          <div className="mt-8 pb-5 flex justify-center items-center">
             <p className="font-medium text-base">¿Ya tienes una cuenta?</p>
-            <Link to={'/'} className="text-blue-400 text-base font-medium ml-2 hover:text-blue-600">Ingresar</Link>
+            <Link to={'/ingresar'} className="text-blue-400 text-base font-medium ml-2 hover:text-blue-600">Ingresar</Link>
           </div>
         </div>
       </div>

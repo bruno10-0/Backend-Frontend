@@ -14,15 +14,15 @@ import {ValidatedMessage} from './pages/CuentaValidada'
 import { Mapa } from './components/Mapa';
 //import Bienvenida from './pages/Bienvenida'
 import RutaProtegida from "./rutaProtegida"
-import Cargando from './components/Cargando';
+import {Bienvenida} from './pages/home';
 import { AuthProvider } from './context/authContext'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
       <Router>
         <Routes>
-        <Route path="/a" element={<Cargando />} />
-          <Route path="/" element={<Ingresar />} />
+        <Route path="/" element={<Bienvenida/>} />
+          <Route path="/ingresar" element={<Ingresar />} />
           <Route path="/registrar" element={<Registrar />} />
           <Route path="/confirmarEmail" element={<ConfirarEmail />} />
           <Route path="/CuentaValidada" element={<ValidatedMessage />} />

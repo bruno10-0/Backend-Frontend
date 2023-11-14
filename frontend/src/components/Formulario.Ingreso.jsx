@@ -1,5 +1,4 @@
 import { Link,useNavigate } from "react-router-dom"
-import PalabrasAleatorias from "./Palabras.Aleatorias"
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useAuth } from "../context/authContext";
@@ -44,10 +43,10 @@ export default function Form() {
       },[isAuthenticated])
 
     return (
-        <form onSubmit={formik.handleSubmit} className="bg-white px-10 py-20 rounded-3xl border-2 border-gray-100">
-            <PalabrasAleatorias />
-            <div className="mt-3 w-full h-1 rounded-full " />
-            <p className="font-medium text-lg text-gray-500 mt-5 text-center">A continuación, ingrese sus datos:</p>
+        <form onSubmit={formik.handleSubmit} className="px-20 rounded-3xl">
+            <div className="mt-3 w-full h-auto rounded-full " />
+            <h1 className="font-bold text-center text-5xl text-orange-400">Iniciar sesión</h1> 
+            <h2 className="font-medium text-lg text-gray-500 mt-5 text-center">A continuación, ingrese sus datos:</h2>
             <div className="mt-8">
 
                 <div>

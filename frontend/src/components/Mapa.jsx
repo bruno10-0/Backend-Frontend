@@ -10,11 +10,12 @@ import {
   getQuejasServicios,
   getQuejasOtro
 } from '../api/auth.js';
+import { useAuth } from '../context/authContext.jsx';
 
 export const Mapa = () => {
   const posadasCoordinates = [-27.3671, -55.8961]; // Coordenadas de Posadas, Misiones, Argentina
   const [markerCoordinates, setMarkerCoordinates] = useState([]);
-  const [filtro, setFiltro] = useState(1);
+  const { filtro, setFiltro } = useAuth();
 
   const Listado = async () => {
     try {
@@ -48,7 +49,7 @@ export const Mapa = () => {
 
   useEffect(() => {
     Listado();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filtro]);
 
   return (
@@ -60,8 +61,9 @@ export const Mapa = () => {
         <div className="w-full h-full md:mx-auto md:w-11/12 lg:w-4/5">
           <div className='hidden md:flex md:w-full h-10 justify-between items-center my-1 border-2 rounded-lg '>
 
-          <button
-              className='h-full w-1/5 rounded-md flex justify-center items-center'
+            <button
+              className={`h-full w-1/5 rounded-md flex justify-center items-center ${filtro === 1 ? 'bg-blue-100' :null
+                }`}
               onClick={() => actualizarFiltro(1)}
             >
               <img
@@ -73,7 +75,8 @@ export const Mapa = () => {
             </button>
 
             <button
-              className='h-full w-1/5 rounded-md flex justify-center items-center'
+              className={`h-full w-1/5 rounded-md flex justify-center items-center ${filtro === 2 ? 'bg-blue-100' :null
+            }`}
               onClick={() => actualizarFiltro(2)}
             >
               <img
@@ -85,7 +88,8 @@ export const Mapa = () => {
             </button>
 
             <button
-              className='h-full w-1/5 rounded-md flex justify-center items-center'
+              className={`h-full w-1/5 rounded-md flex justify-center items-center ${filtro === 3 ? 'bg-blue-100' :null
+            }`}
               onClick={() => actualizarFiltro(3)}
             >
               <img
@@ -97,7 +101,8 @@ export const Mapa = () => {
             </button>
 
             <button
-              className='h-full w-1/5 rounded-md flex justify-center items-center'
+             className={`h-full w-1/5 rounded-md flex justify-center items-center ${filtro === 4 ? 'bg-blue-100' :null
+            }`}
               onClick={() => actualizarFiltro(4)}
             >
               <img
@@ -109,7 +114,8 @@ export const Mapa = () => {
             </button>
 
             <button
-              className='h-full w-1/5 rounded-md flex justify-center items-center'
+             className={`h-full w-1/5 rounded-md flex justify-center items-center ${filtro === 5 ? 'bg-blue-100' :null
+            }`}
               onClick={() => actualizarFiltro(5)}
             >
               <img

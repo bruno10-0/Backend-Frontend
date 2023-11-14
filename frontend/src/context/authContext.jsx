@@ -19,6 +19,7 @@ export const AuthProvider = ({ children }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const [errors, setError] = useState(null)
     const [registro,SetRegistro] = useState(false)
+    const [filtro, setFiltro] = useState(1);    
 
     const singUp = async (user) => {
         try {
@@ -112,7 +113,9 @@ export const AuthProvider = ({ children }) => {
             cargando,
             logOut,
             registro,
-            SetRegistro
+            SetRegistro,
+            filtro,
+            setFiltro
         }}>
             {children}
         </AuthContext.Provider >

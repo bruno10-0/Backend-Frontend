@@ -14,7 +14,7 @@ import Modal from '../components/Modal';
 import { setQueja } from "../api/auth.js"
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../context/authContext'
-import Cargando from "../components/Cargando"
+import {Cargando} from "../components/Cargando"
 
 export default function Queja() {
     const [selectedFile, setSelectedFile] = useState(null);
